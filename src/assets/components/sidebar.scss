@@ -2,4 +2,53 @@
   width: 30%;
   height: 100%;
   background-color: white ;
+  padding: 20px;
+}
+
+.sidebar__header {
+
+}
+
+.sidebar__header h1 {
+  font-family: Handed;
+  font-size: 60px;
+}
+
+.sidebar__body h1 {
+  font-size: 50px;
+  font-family: Handed;
+}
+
+.places__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.place__item {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+}
+
+.place__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.place__img {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+}
+
+.place__info h4,
+.place__info p {
+  font-size: 40px;
+  font-family: Handed;
+}
+
+.place__img img {
+  height: 100%;
+  width: 200px;
 }
