@@ -10,13 +10,13 @@
 }
 
 .sidebar__header h1 {
-  font-family: Handed;
+  font-family: Retro;
   font-size: 60px;
 }
 
 .sidebar__body h1 {
   font-size: 50px;
-  font-family: Handed;
+  font-family: Retro;
 }
 
 .places__container {
@@ -27,13 +27,17 @@
 .place__item {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   border: 1px solid gray;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
 .place__info {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 15px;
 }
 
 .place__img {
@@ -44,8 +48,8 @@
 
 .place__info h4,
 .place__info p {
-  font-size: 40px;
-  font-family: Handed;
+  font-size: 30px;
+  font-family: Retro;
 }
 
 .place__img img {

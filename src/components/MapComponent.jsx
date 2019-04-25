@@ -8,11 +8,19 @@ class MapComponent extends Component {
     }
 
     render() {
+
+
         return (
             <Map className='map__container' google={this.props.google} zoom={14}>
 
-                <Marker onClick={this.onMarkerClick}
-                        name={'Current location'} />
+                <Marker
+                    title={'Дом книги'}
+                    name={'Дом книги'}
+                    position={{lat: 59.936073, lng: 30.325734}} />
+                <Marker
+                    title={'Дом книги'}
+                    name={'Дом книги'}
+                    position={{lat: 59.933893, lng: 30.329601}} />
 
                 <InfoWindow onClose={this.onInfoWindowClose}>
                 </InfoWindow>

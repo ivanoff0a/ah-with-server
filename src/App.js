@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MapComponent from './components/MapComponent'
-import Sidebar from './components/Sidebar'
+import Sidebar from './components/Sidebar/Sidebar.jsx'
 
 class App extends Component {
   constructor() {
