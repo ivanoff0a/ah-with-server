@@ -11,7 +11,14 @@ class MapComponent extends Component {
 
 
         return (
-            <Map className='map__container' google={this.props.google} zoom={14}>
+            <Map className='map__container'
+                 google={this.props.google}
+                 zoom={14}
+                 initialCenter={{
+                     lat: 59.950348,
+                     lng: 30.316440
+                 }}
+            >
 
                 <Marker
                     title={'Дом книги'}

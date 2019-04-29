@@ -15,6 +15,11 @@ class PlacesListComponent extends Component {
                 <PlacesItemComponent/>
                 <PlacesItemComponent/>
                 <PlacesItemComponent/>
+                <PlacesItemComponent/>
+                <PlacesItemComponent/>
+                <PlacesItemComponent/>
+                <PlacesItemComponent/>
+                <PlacesItemComponent/>
             </div>
         );
     }
