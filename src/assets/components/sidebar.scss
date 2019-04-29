@@ -3,7 +3,6 @@
   height: 100%;
   background-color: white ;
   padding: 20px;
-  overflow: scroll;
 }
 
 .sidebar__header {
@@ -11,7 +10,7 @@
 }
 
 .sidebar__header h1 {
-  font-family: JaymontB;
+  font-family: Retro;
   font-size: 35px;
 }
 
@@ -21,7 +20,7 @@
 
 .sidebar__body h1 {
   font-size: 25px;
-  font-family: JaymontB;
+  font-family: Retro;
 }
 
 .places__container {
@@ -36,6 +35,11 @@
   border: 1px solid gray;
   height: 150px;
   margin-bottom: 20px;
+  transition: .3s
+}
+
+.place__item:hover {
+  background-color: aqua;
 }
 
 .place__info {
@@ -54,7 +58,7 @@
 .place__info h4,
 .place__info p {
   font-size: 20px;
-  font-family: JaymontB;
+  font-family: Retro;
 }
 
 .place__img img {

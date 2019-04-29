@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PlacesItemComponent extends Component {
+class PlacesPreview extends Component {
     constructor() {
         super();
         this.state = {}
@@ -10,15 +10,15 @@ class PlacesItemComponent extends Component {
         return (
             <div className='place__item'>
                 <div className='place__info'>
-                    <h4>Hotel Alexandra</h4>
-                    <p>Baker Avenue</p>
+                    <h4>{this.props.data.name}</h4>
+                    <p>{this.props.data.adress}</p>
                 </div>
                 <div className='place__img'>
-                    <img alt='Place Image' src='https://cdn.dorsia.io/location_images/photos/000/052/712/medium/5df74e385914dadba4f88daedfb31187.jpg?1553032564'/>
+                    <img alt='Place Image' src={this.props.data.pic}/>
                 </div>
             </div>
         );
     }
 }
 
-export default PlacesItemComponent;
+export default PlacesPreview;

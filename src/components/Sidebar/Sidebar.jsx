@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PlacesListComponent from './Places/PlacesListComponent';
+import PlacesList from './Places/PlacesList';
 
 class Sidebar extends Component {
     constructor() {
@@ -15,7 +15,7 @@ class Sidebar extends Component {
                 </div>
                 <div className='sidebar__body'>
                     <h1>Places</h1>
-                    <PlacesListComponent/>
+                    <PlacesList places={this.props.places}/>
                 </div>
             </div>
         );
