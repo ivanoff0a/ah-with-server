@@ -14,7 +14,7 @@ class PlacesPreview extends Component {
                     <p>{this.props.data.adress}</p>
                 </div>
                 <div className='place__img'>
-                    <img alt='Place Image' src={this.props.data.pic}/>
+                    <img alt='Place' src={this.props.data.pic}/>
                 </div>
             </div>
         );

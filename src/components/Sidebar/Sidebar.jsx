@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlacesList from './Places/PlacesList';
+import profile__logo from '../../assets/img/profile__logo_new.png';
 
 class Sidebar extends Component {
     constructor() {
@@ -11,7 +12,12 @@ class Sidebar extends Component {
         return (
             <div className='sidebar__container'>
                 <div className='sidebar__header'>
-                    <h1>Architectural Heaven</h1>
+                    <div className='header__logo'>
+                        <h1>Architectural Heaven</h1>
+                    </div>
+                    <div className='header__profile'>
+                        <img src={profile__logo} alt='Profile'/>
+                    </div>
                 </div>
                 <div className='sidebar__body'>
                     <h1>Places</h1>
