@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06d4d6e6-9aeb-47c2-a0c6-ccaecc2444dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/components/map.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/map.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/components/sidebar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/components/sidebar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/styles/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/styles/fonts.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Places/PlacesCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Places/PlacesCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Places/PlacesPreview.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Places/PlacesPreview.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assets/components/sidebar.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="15" selection-start-line="15" selection-end-line="16" />
+            <state relative-caret-position="493">
+              <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -96,9 +91,9 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assets/styles/fonts.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+            <state relative-caret-position="474">
+              <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -136,9 +131,9 @@
         <option value="$PROJECT_DIR$/src/components/Map/MapComponent.jsx" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/Places/PlacesCard.jsx" />
         <option value="$PROJECT_DIR$/src/assets/components/map.scss" />
-        <option value="$PROJECT_DIR$/src/assets/styles/fonts.scss" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/Places/PlacesPreview.jsx" />
         <option value="$PROJECT_DIR$/src/components/Sidebar/Sidebar.jsx" />
+        <option value="$PROJECT_DIR$/src/assets/styles/fonts.scss" />
         <option value="$PROJECT_DIR$/src/assets/components/sidebar.scss" />
       </list>
     </option>
@@ -250,15 +245,16 @@
       <workItem from="1556042142621" duration="4441000" />
       <workItem from="1556473058624" duration="4986000" />
       <workItem from="1556647534996" duration="3228000" />
-      <workItem from="1556701387827" duration="8448000" />
+      <workItem from="1556701387827" duration="12959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39727000" />
+    <option name="totallyTimeSpent" value="44238000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14014752" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -433,18 +429,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/styles/fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="31" column="29" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/styles/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/styles/fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -460,8 +456,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/components/sidebar.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="15" selection-start-line="15" selection-end-line="16" />
+        <state relative-caret-position="493">
+          <caret line="65" column="35" selection-start-line="65" selection-start-column="35" selection-end-line="65" selection-end-column="35" />
         </state>
       </provider>
     </entry>
