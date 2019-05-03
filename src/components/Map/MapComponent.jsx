@@ -5,7 +5,11 @@ import PlacesPreview from "../Sidebar/Places/PlacesList";
 class MapComponent extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            // showingInfoWindow: false,
+            // activeMarker: {},
+            // selectedPlace: {},
+        }
     }
 
     render() {
@@ -23,7 +27,7 @@ class MapComponent extends Component {
         return (
             <Map className='map__container'
                  google={this.props.google}
-                 zoom={14}
+                 zoom={12}
                  initialCenter={{
                      lat: 59.946024,
                      lng: 30.326795
