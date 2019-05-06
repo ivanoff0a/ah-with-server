@@ -1,6 +1,6 @@
 .sidebar__container {
   width: 30%;
-  height: 700px;
+  height: 875px;
   position: absolute;
   z-index: 200;
   top: 10px;
@@ -72,7 +72,7 @@
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
-  background-color: #F7F7F7;
+  background-color: darken(#F7F7F7, 2%);
   height: 100%;
   margin-bottom: 80px;
   overflow: auto;
@@ -85,12 +85,12 @@
 }
 
 .-isHidden {
-  transition: .3s;
-  transform: translateX(-500px);
+  transition: .5s ease-out;
+  transform: translateX(-800px);
 }
 
 .-isShown {
-  transition: .3s;
+  transition: .7s ease-out;
   transform: translateX(0);
 }
 
@@ -108,9 +108,9 @@
   transition: .3s;
   background-color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 5px 0 rgba(100,121,143,0.122);
+  box-shadow: 0 0 15px 0 rgba(100,121,143,0.122);
   &:hover {
-    box-shadow: 0 0 50px 0 rgba(100,121,143,0.122);
+    box-shadow: 0 0 50px 10px rgba(100,121,143,0.122);
     transform: translateY(-4px);
   }
 }

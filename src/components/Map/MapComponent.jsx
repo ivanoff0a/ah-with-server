@@ -5,11 +5,13 @@ import PlacesPreview from "../Sidebar/Places/PlacesList";
 class MapComponent extends Component {
     constructor() {
         super();
-        this.state = {
-            // showingInfoWindow: false,
-            // activeMarker: {},
-            // selectedPlace: {},
-        }
+        this.state = {}
+    }
+
+    mapClicked(mapProps, map, clickEvent) {
+        console.log(mapProps);
+        console.log(map);
+        console.log(clickEvent);
     }
 
     render() {
@@ -31,7 +33,8 @@ class MapComponent extends Component {
                  initialCenter={{
                      lat: 59.946024,
                      lng: 30.326795
-                 }}>
+                 }}
+                 onClick={this.mapClicked}>
 
                 {markers}
 
