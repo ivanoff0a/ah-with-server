@@ -8,10 +8,19 @@ class MapComponent extends Component {
         this.state = {}
     }
 
-    mapClicked(mapProps, map, clickEvent) {
-        console.log(mapProps);
-        console.log(map);
-        console.log(clickEvent);
+    mapClicked = (mapProps, map, clickEvent) => {
+        let lat = clickEvent.latLng.lat();
+        let lng = clickEvent.latLng.lng();
+        this.props.addPlace({
+            name: 'dfsрбурга',
+            adress: 'dsf',
+            lat: lat,
+            lng: lng,
+            style: '2 стиfdsль',
+            architector: 'lalla',
+            pic: 'https://lh5.googleusercontent.com/p/AF1QipOIOBOCAXkSnU0KytelSkehOsMZ_2kvNrCA-0W6=w155-h168-p-k-no',
+            desc: 'lala'
+        });
     }
 
     render() {

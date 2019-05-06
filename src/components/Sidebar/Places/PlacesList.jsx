@@ -11,7 +11,7 @@ class PlacesList extends Component {
 
         let places = this.props.places.map((place, i) => {
             return(
-                <PlacesPreview key={i} data={place}/>
+                <PlacesPreview key={i} data={place} /> // onClick={this.props.setCurrentPlace(i)}
             )
         })
 

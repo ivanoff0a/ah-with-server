@@ -6,6 +6,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
+        currentPlace : {},
         places : [
             {
                 name: 'Севкабель Порт',
@@ -71,14 +72,26 @@ class App extends Component {
     }
   }
 
+  addPlace = (place) => {
+      this.setState({
+          places: [...this.state.places, place]
+      })
+  };
+
+  // setCurrentPlace(place, i) {
+  //     setState передать один кликнутый объект в currentPlace получив его  с помощью key & i
+  // }
+
   render() {
     return (
         <div className='main__container'>
           <Sidebar places={this.state.places} />
-          <MapComponent places={this.state.places}/>
+          <MapComponent places={this.state.places} addPlace={this.addPlace}/>
         </div>
     );
   }
+
+
 }
 
 export default App;

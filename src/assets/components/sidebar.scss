@@ -1,11 +1,10 @@
 .sidebar__container {
   width: 30%;
-  height: 875px;
-  position: absolute;
+  position: fixed;
   z-index: 200;
   top: 10px;
   left: 10px;
-  bottom: 10px;
+  bottom: 80px;
 }
 
 .sidebar__header {
@@ -90,7 +89,7 @@
 }
 
 .-isShown {
-  transition: .7s ease-out;
+  transition: .6s ease-out;
   transform: translateX(0);
 }
 
