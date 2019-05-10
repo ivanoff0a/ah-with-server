@@ -73,9 +73,9 @@ class App extends Component {
   }
 
   addPlace = (place) => {
-      this.setState({
-          places: [...this.state.places, place]
-      })
+      let newPlaces = this.state.places;
+      newPlaces.push(place);
+      this.setState({'places': newPlaces})
   };
 
   // setCurrentPlace(place, i) {
@@ -88,6 +88,8 @@ class App extends Component {
           <Sidebar places={this.state.places} />
           <MapComponent places={this.state.places} addPlace={this.addPlace}/>
         </div>
+
+
     );
   }
 
