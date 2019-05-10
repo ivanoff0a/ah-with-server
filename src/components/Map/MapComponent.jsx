@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
-import PlacesPreview from "../Sidebar/Places/PlacesList";
+import NewPlaceModal from './../Modal/NewPlaceModal';
+
 
 class MapComponent extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            modalOpen: false
+        }
     }
 
     mapClicked = (mapProps, map, clickEvent) => {
@@ -36,18 +39,20 @@ class MapComponent extends Component {
         })
 
         return (
-            <Map className='map__container'
-                 google={this.props.google}
-                 zoom={12}
-                 initialCenter={{
-                     lat: 59.946024,
-                     lng: 30.326795
-                 }}
-                 onClick={this.mapClicked}>
+            <>
+                <Map className='map__container'
+                     google={this.props.google}
+                     zoom={12}
+                     initialCenter={{
+                         lat: 59.946024,
+                         lng: 30.326795
+                     }}
+                     onClick={this.mapClicked}>
 
-                {markers}
-
-            </Map>
+                    {markers}
+                </Map>
+                <NewPlaceModal/>
+            </>
         );
     }
 }
