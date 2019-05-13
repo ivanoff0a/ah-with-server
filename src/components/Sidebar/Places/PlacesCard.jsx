@@ -3,14 +3,20 @@ import React, { Component } from 'react';
 class PlacesCard extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            showHideInfo: ''
+        }
+    }
+
+    openInfoBlock() {
+        this.setState({"showHideInfo": '-isInfoShown'});
     }
 
     render() {
-
+        const classesCard = 'info__container' + ' ' + this.state.showHideInfo;
         return (
-            <div className='places__container'>
-                {places}
+            <div className={classesCard} >
+
             </div>
         );
     }

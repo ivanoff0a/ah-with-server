@@ -79,14 +79,20 @@ class App extends Component {
       console.log(this.state.places);
   };
 
-  // setCurrentPlace(place, i) {
-  //     setState передать один кликнутый объект в currentPlace получив его  с помощью key & i
-  // }
+  // setState передать один кликнутый объект в currentPlace получив его  с помощью key & i
+
+  setCurrentPlace = (place, i) => {
+      let currentPlace = place;
+      this.setState({'currentPlace': currentPlace});
+      console.log(currentPlace, i);
+  }
 
   render() {
     return (
         <div className='main__container'>
-          <Sidebar places={this.state.places} />
+          <Sidebar places={this.state.places}
+                   currentPlace={this.state.currentPlace}
+                   setCurrentPlace={this.setCurrentPlace} />
           <MapComponent places={this.state.places} addPlace={this.addPlace}/>
         </div>
 

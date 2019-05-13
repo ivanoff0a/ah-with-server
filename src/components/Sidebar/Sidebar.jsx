@@ -40,7 +40,9 @@ class Sidebar extends Component {
                 </div>
                 <div className={classesSidebar}>
                     <h1>Места</h1>
-                    <PlacesList places={this.props.places}/>
+                    <PlacesList places={this.props.places}
+                                currentPlace={this.props.currentPlace}
+                                setCurrentPlace={this.props.setCurrentPlace}/>
                 </div>
             </div>
         );

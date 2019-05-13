@@ -4,14 +4,26 @@ import PlacesPreview from "./PlacesPreview";
 class PlacesList extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            showHideInfo: ''
+        }
+    }
+
+    openInfoBlock() {
+        this.setState({"showHideInfo": '-isInfoShown'});
     }
 
     render() {
 
         let places = this.props.places.map((place, i) => {
             return(
-                <PlacesPreview key={i} data={place} /> // onClick={this.props.setCurrentPlace(i)}
+                <PlacesPreview key={i}
+                               data={place}
+                               currentPlace={this.props.currentPlace}
+                               setCurrentPlace={this.props.setCurrentPlace}
+                               openInfoBlock={this.openInfoBlock}
+                               onClick={this.openInfoBlock}
+                               index={i} />
             )
         })
 
