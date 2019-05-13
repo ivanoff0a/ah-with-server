@@ -76,6 +76,7 @@ class App extends Component {
       let newPlaces = this.state.places;
       newPlaces.push(place);
       this.setState({'places': newPlaces})
+      console.log(this.state.places);
   };
 
   // setCurrentPlace(place, i) {

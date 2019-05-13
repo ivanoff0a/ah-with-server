@@ -24,7 +24,6 @@ class MapComponent extends Component {
             modalIsOpen: false
         };
 
-        // this.openModal = this.openModal.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
@@ -41,6 +40,9 @@ class MapComponent extends Component {
 
     onSubmit(event) {
         event.preventDefault();
+        if(this.styleTextField.value == '') {
+            this.styleTextField.value = 'https://img.tourister.ru/files/2/1/5/4/0/8/3/2/original.jpg'; // './../../assets/img/photo__logo.png'
+        }
         if(this.props.addPlace) {
             this.props.addPlace({
                 name: this.nameTextField.value,
@@ -55,10 +57,6 @@ class MapComponent extends Component {
         }
         this.setState({modalIsOpen: false});
     }
-
-    // openModal() {
-    //     this.setState({modalIsOpen: true});
-    // }
 
     afterOpenModal() {
         // references are now sync'd and can be accessed.
@@ -101,7 +99,7 @@ class MapComponent extends Component {
                     style={customStyles}
                     contentLabel="New Place Modal"
                 >
-                    <h3>Добавьте свое место</h3>
+                    <h4 className='form__headline'>Добавьте свое место</h4>
                     <div className="form__container">
                         <form onSubmit={this.onSubmit}>
                             <div className="form-group">
@@ -109,45 +107,49 @@ class MapComponent extends Component {
                                 <input ref={(name) => this.nameTextField = name}
                                        type="text"
                                        placeholder="Введите название"
-                                       className="form-control"/>
+                                       className="form-control__custom"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">Адрес</label>
                                 <input ref={(adress) => this.adressTextField = adress}
                                        type="text"
                                        placeholder="Введите адрес"
-                                       className="form-control"/>
+                                       className="form-control__custom"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">Стиль</label>
                                 <input ref={(style) => this.styleTextField = style}
                                        type="text"
                                        placeholder="Введите название стиля"
-                                       className="form-control"/>
+                                       className="form-control__custom"/>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="exampleInputEmail1">Архитектор (необязательно)</label>
                                 <input ref={(architector) => this.architectorTextField = architector}
                                        type="text"
                                        placeholder="Введите ФИО архитектора"
-                                       className="form-control"/>
+                                       className="form-control__custom"/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Картинка</label>
+                                <label htmlFor="exampleInputEmail1">Картинка (необязательно)</label>
                                 <input ref={(pic) => this.picTextField = pic}
                                        type="text"
                                        placeholder="Введите ссылку картинки"
-                                       className="form-control"/>
+                                       className="form-control__custom"/>
                             </div>
                             <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Описание</label>
+                                <label htmlFor="exampleInputEmail1">Описание (необязательно)</label>
                                 <input ref={(desc) => this.descTextField = desc}
                                        type="text"
                                        placeholder="Добавьте описание"
-                                       className="form-control"/>
+                                       className="form-control__custom"/>
                             </div>
-                            <button type="submit"
-                                    className="btn btn-primary">Добавить</button>
+                            <div className='btn-group'>
+                                <button onClick={this.closeModal}
+                                        className=" btn btn__close">Закрыть</button>
+                                <button type="submit"
+                                        className="btn btn__add">Добавить</button>
+                            </div>
                         </form>
                     </div>
                 </Modal>
