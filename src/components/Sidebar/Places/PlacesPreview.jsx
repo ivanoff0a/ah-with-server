@@ -23,7 +23,7 @@ class PlacesPreview extends Component {
                         <img alt='Place' src={this.props.data.pic}/>
                     </div>
                 </div>
-                <PlacesCard openInfoBlock={this.props.openInfoBlock}/>
+                <PlacesCard showHideInfo={this.props.showHideInfo}/>
             </>
         );
     }

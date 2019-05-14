@@ -8,16 +8,21 @@ class Sidebar extends Component {
     constructor() {
         super();
         this.state = {
+            showHideInfo: '',
             showHideSidebar: '-isShown',
-            showHideArrow: ' '
+            showHideArrow: ''
         }
     }
 
     toggleSidebar() {
         var cssSidebar = (this.state.showHideSidebar === "-isHidden") ? "-isShown" : "-isHidden";
         this.setState({"showHideSidebar": cssSidebar});
-        var cssArrow = (this.state.showHideArrow === "-isHiddenAngle") ? " " : "-isHiddenAngle";
+        var cssArrow = (this.state.showHideArrow === "-isHiddenAngle") ? "" : "-isHiddenAngle";
         this.setState({"showHideArrow": cssArrow});
+    }
+
+    openInfoBlock() {
+        this.setState({'showHideInfo': '-isInfoShown'});
     }
 
     render() {
@@ -42,6 +47,8 @@ class Sidebar extends Component {
                     <h1>Места</h1>
                     <PlacesList places={this.props.places}
                                 currentPlace={this.props.currentPlace}
+                                showHideInfo={this.state.showHideInfo}
+                                openInfoBlock={this.openInfoBlock}
                                 setCurrentPlace={this.props.setCurrentPlace}/>
                 </div>
             </div>
