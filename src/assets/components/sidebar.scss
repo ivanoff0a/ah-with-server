@@ -8,6 +8,10 @@
     width: 88%;
   }
 
+  .place__info {
+    padding: 10px;
+  }
+
   .sidebar__body {
     h1 {
       font-size: 20px;
@@ -252,6 +256,10 @@
       font-size: 21px;
     }
   }
+
+  .place__info {
+    padding: 13px;
+  }
 }
 
 @media (min-width: 1440px){
@@ -427,7 +435,7 @@
 }
 
 .-isHidden {
-  transition: .5s ease-out;
+  transition: .4s ease-out;
   transform: translateX(-800px);
 }
 
@@ -461,7 +469,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 15px;
   h4, p {
     font-family: Roboto-Thin;
   }
@@ -489,20 +496,25 @@
 .info__container {
   display: none;
   width: 100%;
-  position: fixed;
-  z-index: 250;
-  top: 10px;
-  left: 10px;
-  bottom: 80px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
   background-color: darken(#F7F7F7, 2%);
-  height: 100%;
-  margin-bottom: 80px;
   overflow: auto;
   transition: .3s ease-out;
+}
+
+.info__img {
+  img{
+    max-width: 100%;
+  }
+
+}
+
+.info__hide {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  img {
+    height: 25px;
+  }
 }
 
 .-isInfoShown {

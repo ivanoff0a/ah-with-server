@@ -10,14 +10,14 @@ class PlacesList extends Component {
 
     render() {
 
-        let places = this.props.places.map((place, i) => {
+        let places = this.props.showHideInfo ? '' : this.props.places.map((place, i) => {
             return(
                 <PlacesPreview key={i}
                                data={place}
                                currentPlace={this.props.currentPlace}
                                setCurrentPlace={this.props.setCurrentPlace}
                                showHideInfo={this.props.showHideInfo}
-                               onClick={this.props.openInfoBlock}
+                               openInfoBlock={this.props.openInfoBlock}
                                index={i} />
             )
         })
@@ -25,9 +25,13 @@ class PlacesList extends Component {
         return (
             <>
                 <div className='places__container'>
+                    <h1 style={this.props.showHideInfo ? {display: 'none'} : null}>Места</h1>
                     {places}
                 </div>
-                <PlacesCard showHideInfo={this.props.showHideInfo}/>
+                <PlacesCard showHideInfo={this.props.showHideInfo}
+                            currentPlace={this.props.currentPlace}
+                            closeInfoBlock={this.props.closeInfoBlock}
+                />
             </>
         );
     }

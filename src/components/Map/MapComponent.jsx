@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
+import photo__logo from './../../assets/img/photo__logo.PNG'
 import Modal from 'react-modal';
 
 const customStyles = {
@@ -40,8 +41,9 @@ class MapComponent extends Component {
 
     onSubmit(event) {
         event.preventDefault();
-        if(this.styleTextField.value == '') {
-            this.styleTextField.value = 'https://img.tourister.ru/files/2/1/5/4/0/8/3/2/original.jpg'; // './../../assets/img/photo__logo.png'
+        let picValue = this.styleTextField.value;
+        if( picValue == '') {
+            picValue = photo__logo; // './../../assets/img/photo__logo.png'
         }
         if(this.props.addPlace) {
             this.props.addPlace({
@@ -51,7 +53,7 @@ class MapComponent extends Component {
                 lng: this.state.userCoordinates.lng,
                 style: this.styleTextField.value,
                 architector: this.architectorTextField.value,
-                pic: this.picTextField.value,
+                pic: picValue,
                 desc: this.descTextField.value,
             });
         }
@@ -75,6 +77,7 @@ class MapComponent extends Component {
                         title={marker.name}
                         position={{lat: marker.lat,
                             lng: marker.lng}}
+                        // onClick={}
                 />
             )
         })

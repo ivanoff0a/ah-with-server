@@ -9,6 +9,7 @@ class PlacesPreview extends Component {
 
     onPreviewClick = () => {
         this.props.setCurrentPlace(this.props.data, this.props.index);
+        this.props.openInfoBlock();
     }
 
     render() {

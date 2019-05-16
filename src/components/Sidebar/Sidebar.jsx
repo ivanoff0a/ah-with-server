@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlacesList from './Places/PlacesList';
+import PlacesCard from './Places/PlacesCard'
 import profile__logo from '../../assets/img/profile__logo_new.png';
 import menu__logo from '../../assets/img/menu__logo.png';
 import hide__logo from '../../assets/img/hide__logo.png'
@@ -21,8 +22,14 @@ class Sidebar extends Component {
         this.setState({"showHideArrow": cssArrow});
     }
 
-    openInfoBlock() {
+    openInfoBlock = () => {
         this.setState({'showHideInfo': '-isInfoShown'});
+
+    }
+
+    closeInfoBlock = () => {
+        this.setState({'showHideInfo': ''});
+
     }
 
     render() {
@@ -44,11 +51,11 @@ class Sidebar extends Component {
                     </div>
                 </div>
                 <div className={classesSidebar}>
-                    <h1>Места</h1>
                     <PlacesList places={this.props.places}
                                 currentPlace={this.props.currentPlace}
                                 showHideInfo={this.state.showHideInfo}
                                 openInfoBlock={this.openInfoBlock}
+                                closeInfoBlock={this.closeInfoBlock}
                                 setCurrentPlace={this.props.setCurrentPlace}/>
                 </div>
             </div>
