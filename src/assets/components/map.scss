@@ -1,3 +1,13 @@
+//@media screen and (max-width: 760px){
+//  .gmnoprint {
+//    display: none;
+//  }
+//  .gm-control-active {
+//    display: none;
+//  }
+//}
+
+
 .form-control__custom {
   display: block;
   width: 100%;
@@ -11,8 +21,6 @@
   border: 1px solid #ced4da;
   outline-color: darken(lightgrey, 10%);
   transition: .3s ease-out;
-  //-webkit-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  //transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .ReactModal__Overlay {

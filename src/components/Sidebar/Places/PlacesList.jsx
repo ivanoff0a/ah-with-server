@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PlacesPreview from "./PlacesPreview";
+import PlacesCard from "./PlacesCard";
 
 class PlacesList extends Component {
     constructor() {
@@ -22,9 +23,12 @@ class PlacesList extends Component {
         })
 
         return (
-            <div className='places__container'>
-                {places}
-            </div>
+            <>
+                <div className='places__container'>
+                    {places}
+                </div>
+                <PlacesCard showHideInfo={this.props.showHideInfo}/>
+            </>
         );
     }
 }
