@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import photo__logo from './../../assets/img/photo__logo.PNG'
 import Modal from 'react-modal';
+import Geocode from 'react-geocode';
+import ImageUploader from 'react-images-upload';
+
 
 const customStyles = {
     content : {
@@ -22,11 +25,10 @@ class MapComponent extends Component {
         super();
         this.state = {
             userCoordinates: {},
+            userAdress: '',
             modalIsOpen: false
         };
-
         this.onSubmit = this.onSubmit.bind(this);
-        this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
     }
 
@@ -36,33 +38,64 @@ class MapComponent extends Component {
             lng: clickEvent.latLng.lng()
         }
         this.setState({'userCoordinates':  newUserCoordinates});
+        Geocode.fromLatLng(this.state.userCoordinates.lat, this.state.userCoordinates.lng).then(
+            response => {
+                let adressValue = response.results[0].formatted_address;
+                if(adressValue === '') {
+                    adressValue = 'Не известно';
+                }
+                this.setState({'userAdress':  adressValue})
+            },
+            error => {
+                console.error(error);
+            }
+        );
         this.setState({modalIsOpen: true});
+    }
+
+    onMarkerClick = (props, marker, e) => {
+        this.props.setCurrentPlace(this.data, this.index);
+        this.props.openInfoBlock();
+        // console.log(this.data, this.index);
     }
 
     onSubmit(event) {
         event.preventDefault();
         let picValue = this.styleTextField.value;
-        if( picValue == '') {
-            picValue = photo__logo; // './../../assets/img/photo__logo.png'
+        let descValue = this.descTextField.value;
+        let architectorValue = this.architectorTextField.value;
+        let styleValue = this.styleTextField.value;
+        let nameValue = this.nameTextField.value;
+
+        if( picValue === '') {
+            picValue = photo__logo;
         }
+        if( nameValue === '') {
+            nameValue = 'Не известно';
+        }
+        if( styleValue === '') {
+            styleValue = 'Не известно';
+        }
+        if( architectorValue === '') {
+            architectorValue = 'Не известно';
+        }
+        if( descValue === '') {
+            descValue = 'Не известно';
+        }
+
         if(this.props.addPlace) {
             this.props.addPlace({
-                name: this.nameTextField.value,
-                adress: this.adressTextField.value,
+                name: nameValue,
+                adress: this.state.userAdress,
                 lat: this.state.userCoordinates.lat,
                 lng: this.state.userCoordinates.lng,
-                style: this.styleTextField.value,
-                architector: this.architectorTextField.value,
+                style: styleValue,
+                architector: architectorValue,
                 pic: picValue,
-                desc: this.descTextField.value,
+                desc: descValue,
             });
         }
         this.setState({modalIsOpen: false});
-    }
-
-    afterOpenModal() {
-        // references are now sync'd and can be accessed.
-        // this.subtitle.style.color = '#f00';
     }
 
     closeModal() {
@@ -71,13 +104,18 @@ class MapComponent extends Component {
 
     render() {
 
+        Geocode.setApiKey("AIzaSyB4PFkIZzqTwBwf5oIC0nDW4oAk0jJXwD4");
+
         let markers = this.props.places.map((marker, i) => {
             return(
                 <Marker key={i}
+                        index={i}
+                        data={marker}
+                        // animation= {this.props.google.maps.Animation.BOUNCE}
                         title={marker.name}
                         position={{lat: marker.lat,
                             lng: marker.lng}}
-                        // onClick={}
+                        onClick={this.onMarkerClick}
                 />
             )
         })
@@ -110,13 +148,6 @@ class MapComponent extends Component {
                                 <input ref={(name) => this.nameTextField = name}
                                        type="text"
                                        placeholder="Введите название"
-                                       className="form-control__custom"/>
-                            </div>
-                            <div className="form-group">
-                                <label htmlFor="exampleInputEmail1">Адрес</label>
-                                <input ref={(adress) => this.adressTextField = adress}
-                                       type="text"
-                                       placeholder="Введите адрес"
                                        className="form-control__custom"/>
                             </div>
                             <div className="form-group">

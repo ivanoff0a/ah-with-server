@@ -9,7 +9,6 @@ class Sidebar extends Component {
     constructor() {
         super();
         this.state = {
-            showHideInfo: '',
             showHideSidebar: '-isShown',
             showHideArrow: ''
         }
@@ -20,16 +19,6 @@ class Sidebar extends Component {
         this.setState({"showHideSidebar": cssSidebar});
         var cssArrow = (this.state.showHideArrow === "-isHiddenAngle") ? "" : "-isHiddenAngle";
         this.setState({"showHideArrow": cssArrow});
-    }
-
-    openInfoBlock = () => {
-        this.setState({'showHideInfo': '-isInfoShown'});
-
-    }
-
-    closeInfoBlock = () => {
-        this.setState({'showHideInfo': ''});
-
     }
 
     render() {
@@ -53,9 +42,9 @@ class Sidebar extends Component {
                 <div className={classesSidebar}>
                     <PlacesList places={this.props.places}
                                 currentPlace={this.props.currentPlace}
-                                showHideInfo={this.state.showHideInfo}
-                                openInfoBlock={this.openInfoBlock}
-                                closeInfoBlock={this.closeInfoBlock}
+                                showHideInfo={this.props.showHideInfo}
+                                openInfoBlock={this.props.openInfoBlock}
+                                closeInfoBlock={this.props.closeInfoBlock}
                                 setCurrentPlace={this.props.setCurrentPlace}/>
                 </div>
             </div>
