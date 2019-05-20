@@ -3,8 +3,6 @@ import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 import photo__logo from './../../assets/img/photo__logo.PNG'
 import Modal from 'react-modal';
 import Geocode from 'react-geocode';
-import ImageUploader from 'react-images-upload';
-
 
 const customStyles = {
     content : {
@@ -54,14 +52,14 @@ class MapComponent extends Component {
     }
 
     onMarkerClick = (props, marker, e) => {
-        this.props.setCurrentPlace(this.data, this.index);
+        this.props.setCurrentPlace(props.data, props.index);
         this.props.openInfoBlock();
-        // console.log(this.data, this.index);
+        // console.log( props.data, props.index); // this.props.data, this.props.index
     }
 
     onSubmit(event) {
         event.preventDefault();
-        let picValue = this.styleTextField.value;
+        let picValue = this.picTextField.value;
         let descValue = this.descTextField.value;
         let architectorValue = this.architectorTextField.value;
         let styleValue = this.styleTextField.value;

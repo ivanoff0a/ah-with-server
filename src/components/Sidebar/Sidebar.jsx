@@ -24,7 +24,7 @@ class Sidebar extends Component {
     render() {
         const classesSidebar = 'sidebar__body' + ' ' + this.state.showHideSidebar;
         return (
-            <div className='sidebar__container'>
+            <>
                 <div className='sidebar__header'>
                     <div className='header__menu'>
                         <img src={menu__logo} alt='Menu'/>
@@ -47,7 +47,7 @@ class Sidebar extends Component {
                                 closeInfoBlock={this.props.closeInfoBlock}
                                 setCurrentPlace={this.props.setCurrentPlace}/>
                 </div>
-            </div>
+            </>
         );
     }
 }

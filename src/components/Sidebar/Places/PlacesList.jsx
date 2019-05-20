@@ -28,6 +28,10 @@ class PlacesList extends Component {
                     <h1 style={this.props.showHideInfo ? {display: 'none'} : null}>Места</h1>
                     {places}
                 </div>
+
+                {/*<Route path="/place/:id"*/}
+                       {/*render={props => <PlacesCard {...props}/>}/>*/}
+
                 <PlacesCard showHideInfo={this.props.showHideInfo}
                             currentPlace={this.props.currentPlace}
                             closeInfoBlock={this.props.closeInfoBlock}

@@ -11,6 +11,14 @@ class PlacesCard extends Component {
         this.state = {}
     }
 
+    // componentDidMount() {
+    //     document.addEventListener('kepress', )
+    // }
+    //
+    // componentWillUnmount() {
+    //
+    // }
+
     render() {
         const classesCard = 'info__container' + ' ' + this.props.showHideInfo;
         return (
@@ -33,7 +41,7 @@ class PlacesCard extends Component {
                                 <p>Адрес:</p>
                             </div>
                         </div>
-                        <div  className='info__p'>
+                        <div  className='info__p info__p-adress'>
                             <p>{this.props.currentPlace.adress}</p>
                         </div>
                     </div>
