@@ -1,4 +1,4 @@
-@media screen and (max-width: 760px){
+@media screen and (max-width: 760px) {
   .gmnoprint {
     display: none;
   }
@@ -7,6 +7,35 @@
   }
 }
 
+@media (min-width: 320px) {
+  .ReactModal__Content {
+    width: 310px;
+  }
+}
+
+@media (min-width: 375px) {
+  .ReactModal__Content {
+    width: 365px;
+  }
+}
+
+@media (min-width: 425px) {
+  .ReactModal__Content {
+    width: 415px;
+  }
+}
+
+@media (min-width: 765px) {
+  .ReactModal__Content {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ReactModal__Content {
+    width: 600px;
+  }
+}
 
 .form-control__custom {
   display: block;
@@ -20,7 +49,7 @@
   background-color: #fff;
   border: 1px solid #ced4da;
   outline-color: darken(lightgrey, 10%);
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .ReactModal__Overlay {
@@ -66,33 +95,24 @@
   padding-left: 5px;
   padding-right: 5px;
   font-family: Roboto-Regular, sans-serif;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   &__close {
     background-color: lightgrey;
     margin-right: 10px;
     color: black;
     &:hover {
       background-color: darken(lightgrey, 4%);
-      //box-shadow: 0 0 50px 10px rgba(100,121,143,0.122);
-      //transform: translateY(-4px);
     }
   }
   &__add {
-    background-color: #31C653;
+    background-color: #31c653;
     color: white;
     &:hover {
-      background-color: darken(#31C653, 4%);
+      background-color: darken(#31c653, 4%);
       color: lighten(white, 10%);
-      //box-shadow: 0 0 10px 5px rgba(100,121,143,0.122);
-      //transform: translateY(-1px);
     }
   }
 }
-
-
-
-
-
 
 .map__container {
   position: relative;
