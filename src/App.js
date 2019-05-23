@@ -85,19 +85,27 @@ class App extends Component {
     };
   }
 
-  escFunction(event){
-    if(event.keyCode === 27) {
-      this.props.closeInfoBlock();
-    }
-  }
-
-  componentDidMount(){
-    document.addEventListener("keydown", this.escFunction, false);
-  }
-
-  componentWillUnmount(){
-    document.removeEventListener("keydown", this.escFunction, false);
-  }
+  // showSidebar(event){
+  //   if(event.keyCode === 39) {
+  //     this.setState({ showHideSidebar: '-isShown' });
+  //   }
+  // }
+  //
+  // hideSidebar(event){
+  //   if(event.keyCode === 37) {
+  //     this.setState({ showHideSidebar: '-isHidden' });
+  //   }
+  // }
+  //
+  // componentDidMount(){
+  //   document.addEventListener("keydown", this.showSidebar, false);
+  //   document.addEventListener("keydown", this.hideSidebar, false);
+  // }
+  //
+  // componentWillUnmount(){
+  //   document.removeEventListener("keydown", this.showSidebar, false);
+  //   document.removeEventListener("keydown", this.hideSidebar, false);
+  // }
 
   addPlace = place => {
     let newPlaces = this.state.places;
