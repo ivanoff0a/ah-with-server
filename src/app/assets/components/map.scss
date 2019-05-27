@@ -1,0 +1,130 @@
+@media screen and (max-width: 760px) {
+  .gmnoprint {
+    display: none;
+  }
+  .gm-control-active {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) {
+  .ReactModal__Content {
+    width: 310px;
+  }
+}
+
+@media (min-width: 375px) {
+  .ReactModal__Content {
+    width: 365px;
+  }
+}
+
+@media (min-width: 425px) {
+  .ReactModal__Content {
+    width: 415px;
+  }
+}
+
+@media (min-width: 765px) {
+  .ReactModal__Content {
+    width: 500px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ReactModal__Content {
+    width: 600px;
+  }
+}
+
+.form-control__custom {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  outline-color: darken(lightgrey, 10%);
+  transition: 0.3s ease-out;
+}
+
+.ReactModal__Overlay {
+  z-index: 300;
+}
+
+.ReactModal__Content {
+  border-radius: 0 !important;
+}
+
+.form__headline {
+  font-family: Roboto-Regular, sans-serif;
+}
+
+.form__container {
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 10px !important;
+  label {
+    margin-bottom: 3px !important;
+    font-family: Roboto-Regular, sans-serif;
+  }
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.form-control {
+  border-radius: 0 !important;
+}
+
+.btn {
+  width: 150px;
+  height: calc(1.5em + 0.75rem + 2px);
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: Roboto-Regular, sans-serif;
+  transition: 0.3s ease-out;
+  &__close {
+    background-color: lightgrey;
+    margin-right: 10px;
+    color: black;
+    &:hover {
+      background-color: darken(lightgrey, 4%);
+    }
+  }
+  &__add {
+    background-color: #31c653;
+    color: white;
+    &:hover {
+      background-color: darken(#31c653, 4%);
+      color: lighten(white, 10%);
+    }
+  }
+}
+
+.map__container {
+  position: relative;
+  height: 100% !important;
+}
+
+//.gmnoprint {
+//  margin-right: 30px;
+//}
+
+//.gm-iv-container {
+//  position: absolute !important;
+//  top: 0 !important;
+//  right: 0 !important;
+//}
