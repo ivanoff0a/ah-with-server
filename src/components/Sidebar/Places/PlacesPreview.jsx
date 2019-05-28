@@ -17,7 +17,7 @@ class PlacesPreview extends Component {
         <div className="place__item" onClick={this.onPreviewClick}>
           <div className="place__info">
             <h4>{this.props.data.name}</h4>
-            <p>{this.props.data.adress}</p>
+            <p>{this.props.data.address}</p>
           </div>
           <div className="place__img">
             <img alt="Place" src={this.props.data.pic} />

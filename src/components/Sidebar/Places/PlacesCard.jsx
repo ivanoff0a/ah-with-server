@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import del__icon from "./../../../assets/img/del__icon.svg";
-import adress__icon from "./../../../assets/img/sight__logo.png";
+import address__icon from "./../../../assets/img/sight__logo.png";
 import style__icon from "./../../../assets/img/style__logo.png";
 import arch__icon from "./../../../assets/img/arch__logo.png";
 import desc__icon from "./../../../assets/img/desc__logo.png";
@@ -43,14 +43,14 @@ class PlacesCard extends Component {
           <div className="info__item">
             <div className="info__h">
               <div className="info__icon">
-                <img src={adress__icon} />
+                <img src={address__icon} />
               </div>
               <div className="info__name">
                 <p>Адрес:</p>
               </div>
             </div>
-            <div className="info__p info__p-adress">
-              <p>{this.props.currentPlace.adress}</p>
+            <div className="info__p info__p-address">
+              <p>{this.props.currentPlace.address}</p>
             </div>
           </div>
           <div className="info__item-row">

@@ -39,11 +39,11 @@ class MapComponent extends Component {
       this.state.userCoordinates.lng
     ).then(
       response => {
-        let adressValue = response.results[0].formatted_address;
-        if (adressValue === "") {
-          adressValue = "Не известно";
+        let addressValue = response.results[0].formatted_address;
+        if (addressValue === "") {
+          addressValue = "Не известно";
         }
-        this.setState({ userAdress: adressValue });
+        this.setState({ userAdress: addressValue });
       },
       error => {
         console.error(error);
@@ -87,7 +87,7 @@ class MapComponent extends Component {
     if (this.props.addPlace) {
       this.props.addPlace({
         name: nameValue,
-        adress: this.state.userAdress,
+        address: this.state.userAdress,
         lat: this.state.userCoordinates.lat,
         lng: this.state.userCoordinates.lng,
         style: styleValue,
