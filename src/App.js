@@ -13,6 +13,7 @@ class App extends Component {
             showHideSidebar: "-isShown",
             showHideArrow: "",
             currentPlace: {},
+            currentPlaceI: '',
             places: []
         };
     }
@@ -69,8 +70,18 @@ class App extends Component {
         this.setState({ places: newPlaces });
     };
 
+    deletePlace = async place => {
+        const response = await apiRequestService.deletePlace(place);
+        console.log("This is the success delete", response);
+
+        let newPlaces = this.state.places;
+        newPlaces.splice(this.state.currentPlaceI, 1);
+        this.setState({ places: newPlaces });
+    };
+
     setCurrentPlace = (place, i) => {
         this.setState({ currentPlace: place });
+        this.setState({ currentPlaceI: i });
     };
 
     openInfoBlock = () => {
@@ -95,6 +106,7 @@ class App extends Component {
             <div className="main__container">
                 <Sidebar
                     places={this.state.places}
+                    deletePlace={this.deletePlace}
                     currentPlace={this.state.currentPlace}
                     setCurrentPlace={this.setCurrentPlace}
                     showHideInfo={this.state.showHideInfo}

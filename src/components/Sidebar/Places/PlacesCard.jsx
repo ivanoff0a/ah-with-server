@@ -36,7 +36,7 @@ class PlacesCard extends Component {
         </div>
 
         <h1>{this.props.currentPlace.name}</h1>
-        <div className="info__img">
+        <div className="info__img" onClick={this.props.deletePlace}>
           <img src={this.props.currentPlace.pic} />
         </div>
         <div className="info__text">

@@ -50,6 +50,8 @@ module.exports = (app) => {
         .put(async (req, res, next) => {
             let response = await place_controller.updatePlace(req.body.oldName, req.body.newName, req.body.newDesc);
 
+            console.log(req)
+
             console.log("Back to Route", response);
             if (!response.isError) {
                 res.json({

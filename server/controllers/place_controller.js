@@ -52,16 +52,19 @@ const updatePlace = async (oldName, newName, newDesc) => {
     }
 
     const result = await place_dao.updatePlace(project, newName, newDesc);
-    return place;
+    return result;
 };
 
 const deletePlace = async (name) => {
-    const response = await place_dao.deletePlace(name);
-    console.log('AFTER DELETE', response);
-
-    if (!response) {
-        return response;
+    const place = await place_dao.getPlaceByName(name);
+    if (!place){
+        return {
+            error: 'No Place Like This in a DataBase'
+        }
     }
+
+    const result = await place_dao.deletePlace(name);
+    return result;
 };
 
 module.exports = {

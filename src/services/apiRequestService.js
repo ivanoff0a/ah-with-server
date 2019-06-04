@@ -35,11 +35,7 @@ const apiRequestService = {
   },
 
   deletePlace: (name) => {
-    return axios.delete('http://localhost:3005/api/place', {
-      params: {
-        name: name
-      }
-    });
+    return axios.delete('http://localhost:3005/api/place?name=' + name);
   },
 
 

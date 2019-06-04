@@ -107,7 +107,6 @@ class MapComponent extends Component {
 
   render() {
     Geocode.setApiKey("AIzaSyB4PFkIZzqTwBwf5oIC0nDW4oAk0jJXwD4");
-    console.log(this.props.google);
     let markers = this.props.places.map((marker, i) => {
       return (
         <Marker

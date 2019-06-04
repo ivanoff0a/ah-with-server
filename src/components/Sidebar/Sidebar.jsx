@@ -31,6 +31,7 @@ class Sidebar extends Component {
         </div>
         <div className={classesSidebar}>
           <PlacesList
+            deletePlace={this.props.deletePlace}
             places={this.props.places}
             currentPlace={this.props.currentPlace}
             showHideInfo={this.props.showHideInfo}

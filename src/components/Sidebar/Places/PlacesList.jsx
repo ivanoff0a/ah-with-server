@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PlacesPreview from "./PlacesPreview";
 import PlacesCard from "./PlacesCard";
 import { Route, Switch } from "react-router-dom";
+import Sidebar from "../Sidebar";
 
 class PlacesList extends Component {
   constructor() {
@@ -38,6 +39,7 @@ class PlacesList extends Component {
         {/*  path="/places/:index"*/}
         {/*  render={ props => (*/}
             <PlacesCard
+              deletePlace={this.props.deletePlace}
               showHideInfo={this.props.showHideInfo}
               currentPlace={this.props.currentPlace}
               closeInfoBlock={this.props.closeInfoBlock}
