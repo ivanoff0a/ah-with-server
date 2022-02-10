@@ -38,7 +38,7 @@
     "bootstrap": "^4.3.1",
     "husky": "^2.3.0",
     "mongoose": "^5.5.3",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "prettier": "1.17.1",
     "pretty-quick": "^1.11.0"
   }
